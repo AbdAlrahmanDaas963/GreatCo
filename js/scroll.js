@@ -6,8 +6,11 @@ var testimonial=document.querySelector('.testimonial-title');
 
 window.addEventListener("scroll", function(){
     let scrollTop_val=document.documentElement.scrollTop;
+    let heightSection=document.documentElement.scrollTop;
+    let windwWidth=window.innerWidth;
+    console.log(scrollTop_val);
     if (scrollTop_val >= 300){
-        aboutMy.style.left="50px";
+        aboutMy.style.left="0px";
         aboutMy.style.visibility='visible';
         aboutMy.style.opacity='1';
         aboutMyImage.style.right="50px";
@@ -23,21 +26,31 @@ window.addEventListener("scroll", function(){
     }
 
     if(scrollTop_val>=1000){
-        servicesTitle.style.left="0px";
+        if (windwWidth>760){
+            servicesTitle.style.left="200px";
+        }else{
+            servicesTitle.style.left="25vw";
+        }
     }else{
-        servicesTitle.style.left="-200px";
+            servicesTitle.style.left="0px";
     }
 
     if(scrollTop_val>=1700){
-        workTitle.style.left="0px";
+        if (windwWidth>760)
+            workTitle.style.left="200px";
+        else
+        workTitle.style.left="32vw";
     }else{
-        workTitle.style.left="-200px";
+        workTitle.style.left="0px";
     }
 
     if(scrollTop_val>=2500){
-        testimonial.style.left="0px";
+        if (windwWidth>760)
+            testimonial.style.left="200px";
+        else
+            testimonial.style.left="26vw";
     }else{
-        testimonial.style.left="-200px";
+        testimonial.style.left="0px";
     }
 });
 
@@ -47,10 +60,12 @@ window.addEventListener("load",function(){
     var companyName=document.querySelector('.company-name');
     var companyBtn=document.querySelector('.what-we-do-btn');
     var companyDesc=document.querySelector('.company-desc');
-    homeContant.style.left="-20px";
+    homeContant.style.left="50px";
     setTimeout(() => {
-        if (windwWidth>800)
-            homeContant.style.left="20px"; 
+        if (windwWidth>800){
+            homeContant.style.transition="left 1.8s";
+            homeContant.style.left="20px";
+        } 
         else    
             homeContant.style.left="0px"; 
     }, 2000);
@@ -62,3 +77,17 @@ window.addEventListener("load",function(){
     companyDesc.style.opacity="1";
 });
 
+
+/*
+let ourWorkItem=document.querySelectorAll(".services-item");
+ourWorkItem.forEach((ele)=>{
+    ele.addEventListener("mouseover",()=>{
+        ourWorkItem.forEach((item)=>{
+            item.style.zIndex="0";
+            item.style.transform="scale(1)";
+        });
+        ele.style.zIndex="10";
+        ele.style.transform="scale(1.1)";
+    })
+});
+*/

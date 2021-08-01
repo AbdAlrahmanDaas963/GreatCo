@@ -112,7 +112,7 @@ a{
     border: 2px solid greenyellow;
     border-radius: 10px;
     padding:10px 20px;
-    background-color:#f6ff0028;
+   
     transition:background-color 0.2s
 }
 .drop-list li span:hover{
@@ -120,7 +120,7 @@ a{
 }
 .drop-list li:last-child span:hover{
     color:white !important;
-    background-color:#f6ff00bd;
+    background-color:#f6ff0028;
 }
 @media screen and (max-width:1040px) {
     .header{
@@ -241,18 +241,18 @@ a{
 }
 .home-background .background-item:nth-child(3){
     left:100%;
-    background-image: url("../images/work-2.jpg");
+    background-image: url("../images/work-5.jpg");
 }
 .home-background .background-item:nth-child(4){
     left:100%;
-    background-image: url("../images/3.jpg");
+    background-image: url("../images/WhatsApp Image 2021-07-26 at 4.28.22 PM.jpeg");
 }
-
+/* 
 .home-background .background-item:nth-child(4){left:100%}
 .home-background .background-item:nth-child(5){left:100%}
 .home-background .background-item:nth-child(6){left:100%}
 .home-background .background-item:nth-child(7){left:100%}
-.home-background .background-item:nth-child(8){left:100%;background-image: url("../images/work-2.jpg");}
+.home-background .background-item:nth-child(8){left:100%;background-image: url("../images/work-2.jpg");} */
 
 .home-content{
     width:fit-content;
@@ -263,7 +263,7 @@ a{
     align-items: center;
     background-color: #1e618ebd;
     position: relative;
-    left:1500px;
+    left:-900px;
     transition:left 2s;
     margin-left:30px;
 }
@@ -493,6 +493,7 @@ a{
     margin: auto;
     display: flex;
     z-index: 2;
+    padding:0 0 0 100px;
     align-items: center;
     overflow: hidden;
 }
@@ -555,8 +556,10 @@ a{
         position: relative;
     }
     .about-container{
-        width:60%;
+        width:100%;
+        padding:0;
         margin: auto;
+        display: initial;
     }
     .about-as .layer{
         background-color: #065a92c9;
@@ -569,6 +572,7 @@ a{
         /*word-break: break-all;*/
         padding:0px 5px;
         margin: auto;
+        overflow: hidden;
     }
     .about-title{
         width: 100%;
@@ -591,11 +595,7 @@ a{
     }
 
 }
-@media screen and (max-width:550px) {
-    .about-container{
-        width: 70%;
-    }
-}
+
 
 
 /* Our Services */
@@ -610,14 +610,14 @@ a{
     grid-template-columns:auto auto auto auto auto;
 }
 .services-title{
-    width: 70%;
+    width: fit-content;
+    margin:0px 0 50px 0;
     text-align: left;
     font-size: 35px;
     font-weight:bolder;
     color:#065992;
-    margin:0px auto 50px auto;
     position: relative;
-    left:-200px;
+    left:0px;
     transition:left 2s;
 }
 .services-container .services-item{
@@ -627,8 +627,9 @@ a{
     background-size:cover;
     background-position:center;
     position: relative;
-    transition: transform 0.2s,z-index 0.5s;
+    transition: transform 0.3s,font-size 0.5s;
     z-index: 0;
+    font-size: 1.3vw;
 }
 .services-container .services-item:nth-child(1){
     background-image: url("../images/work-5.jpg");
@@ -646,21 +647,13 @@ a{
     background-image: url("../images/ivan-stern-LOLSb7m6XkU-unsplash.jpg");
 }
 .services-container .services-item .layer{
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, #1c62be8a);
-    transition: background-image 0.7s;
-}
-.services-item:hover{
-    transform: scale(1.1);
-    z-index:10;
-}
-.services-item:hover > .layer{
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, #1c62beea);
     transition: background-image 0.7s;
 }
 .item-title{
     color: rgb(255, 255, 255);
     position: absolute;
-    font-size: 1.3vw;
+
     background-color: #003f6900;
     font-weight: 600;
     bottom:20px;
@@ -670,6 +663,16 @@ a{
 .item-title span{
     display: block;
 }
+.services-item:hover{
+    transform: scale(1.1);
+    z-index:10;
+    font-size: 1.6vw !important;
+}
+.services-item:hover > .layer{
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, #1c62be8a);
+    transition: background-image 0.7s;
+}
+
 @media screen and (max-width:760px) {
     .our-services{
         width: 100%;
@@ -682,10 +685,9 @@ a{
         grid-template-rows:auto auto auto auto auto;
     }
     .services-title{
-        width: 80%;
-        text-align: center;
+        width:fit-content;
+        text-align: left;
         color:#065992;
-        margin:30px auto;
     }
     .services-container .services-item{
         display: inline-block;
@@ -702,7 +704,7 @@ a{
         font-weight: 600;
         bottom:20px;
         width: fit-content;
-        left:20px;
+        left:50px;
     }
 
 }
@@ -728,14 +730,14 @@ a{
     text-align: center;
 }
 .our-work .work-title{
-    width: 70%;
+    width: fit-content;
     text-align: left;
     font-size: 35px;
     font-weight:bolder;
     color:#065992;
-    margin:0px auto 50px auto;
+    margin:0px 0 50px 0;
     position: relative;
-    left:-200px;
+    left:0px;
     transition:left 2s;
 }
 .work-main .work-main-item .layer{
@@ -811,10 +813,10 @@ a{
         padding:50px 0px;
     }
     .our-work .work-title{
-        width: 80%;
-        text-align: center;
+        width: fit-content;
+        text-align: left;
         color:#065992;
-        margin:30px auto;
+        margin:30px 0;
     }
     
     .work-main{
@@ -856,13 +858,13 @@ a{
     position: relative;
 }
 .testimonial-title{
-    width: 70%;
+    width: fit-content;
     text-align: left;
     font-size: 35px;
     color:#065992;
-    margin:0px auto 50px auto;
+    margin:0px 0 50px 0;
     position: relative;
-    left:-200px;
+    left:0px;
     transition:left 2s;
 }
 .testimonial-content{

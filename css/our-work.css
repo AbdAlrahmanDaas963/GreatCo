@@ -176,7 +176,7 @@ body{
     /*display: grid;
     grid-template-columns:auto auto auto;*/
     text-align: center;
-}
+`}
 .work-main-item{
     width: 295px;
     height: 250px;
@@ -217,6 +217,7 @@ body{
     }
     .work-main-item{
         width: 70vw;
+        height:initial;
         position: relative;
         display: inline-block;
     } 
